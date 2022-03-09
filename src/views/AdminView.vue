@@ -1,3 +1,13 @@
 <template>
-  <h2>後台</h2>
+  <Navbar></Navbar>
 </template>
+
+<script>
+import Navbar from "@/components/AdminNavbar.vue";
+
+export default {
+  components: {
+    Navbar,
+  },
+};
+</script>

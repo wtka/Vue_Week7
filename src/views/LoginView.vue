@@ -64,11 +64,11 @@ export default {
         .post(apiUrl, user)
         .then((response) => {
           const { expired, token } = response.data;
-          document.cookie = `hexToken=${token};expires=${new Date(expired)};`;
-          router.push('/admin');
+          document.cookie = `hexToken=${token};expires=${new Date(expired)};`;          
+          router.push('/admin/products');
         })
         .catch((error) => {
-          console.log(error);
+          alert(error.response.data.message);
         });
     }
 
